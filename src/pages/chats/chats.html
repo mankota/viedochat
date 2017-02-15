@@ -1,0 +1,30 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<ion-buttons start>
+			<button (click)="goContacts()" ion-button icon-only>
+				<ion-icon name="contacts"></ion-icon>
+			</button>
+		</ion-buttons>
+		<ion-title>
+			Chats
+		</ion-title>
+		<ion-buttons end>
+			<button (click)="account()" ion-button icon-only>
+				<ion-icon name="settings"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list class="chat-list">
+		<ion-item (click)="chat(chatItem.id)" class="item-remove-animate item-avatar item-icon-right online" *ngFor="let chatItem of chatService.chats" type="item-text-wrap">
+			<ion-avatar item-left>
+				<user-image [contact]=chatItem.users [hideSelf]=true></user-image>
+    		</ion-avatar>
+			<h2>{{chatItem.name}}</h2>
+			<p class="chat-text" [innerHTML]="chatItem.lastMarked"></p>
+			<span class="last-time" *ngIf="chatItem.lastDate">{{chatItem.lastDate | amTimeAgo:true}}</span>
+		</ion-item>
+	</ion-list>
+</ion-content>

@@ -1,0 +1,85 @@
+page-chats {
+	.chat-list .item .last-time {
+		display: flex;
+		right: 10px;
+		position: absolute;
+		top: 20px;
+		font-size: 11px;
+		opacity: 0.8;
+	}
+	.chat-list .item:first-child {
+		border-top: none;
+	}
+	.chat-list .item:last-child {
+		border-bottom: none;
+	}
+
+	.chat-list .item > * {
+		transition: all 0.3s ease;
+	}
+
+	.chat-list .item-avatar {
+		min-height: 70px;
+	}
+
+	.item .item-inner {
+		background-position: right 0 center !important;
+	}
+
+	.user-img-multi img {
+		display: none;
+	}
+
+	.user-img-multi img:first-child,
+	.user-img-multi img:nth-child(2),
+	.user-img-multi img:nth-child(3),
+	.user-img-multi img:nth-child(4) {
+		display: block;
+	}
+
+	.user-img-multi.user-img-count2 img {
+		height: 26px;
+		width: 26px;
+	}
+	.user-img-multi.user-img-count2 img:nth-child(2) {
+		margin-top: -10px;
+		margin-left: 10px;
+	}
+
+	.user-img-multi.user-img-count3 img {
+		height: 22px;
+		width: 22px;
+	}
+	.user-img-multi.user-img-count3 img:nth-child(2) {
+		margin-top: -10px;
+		margin-left: 3px;
+	}
+	.user-img-multi.user-img-count3 img:nth-child(3) {
+		margin-top: -32px;
+		margin-left: 12px;
+	}
+
+	.user-img-multi.user-img-count4 img {
+		height: 20px;
+		width: 20px;
+	}
+	.user-img-multi.user-img-count4 img:nth-child(2) {
+		margin-top: -6px;
+		margin-left: 3px;
+	}
+	.user-img-multi.user-img-count4 img:nth-child(3) {
+		margin-top: -34px;
+		margin-left: 12px;
+	}
+	.user-img-multi.user-img-count4 img:nth-child(4) {
+		margin-top: -7px;
+		margin-left: 16px;
+	}
+
+	.chat-list .item h2 {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		margin-right: 2.2em;
+	}
+
+}

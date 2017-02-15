@@ -1,0 +1,23 @@
+<ion-header>
+	<ion-navbar color="light">
+		<ion-title>
+			Add Contact to Chat
+		</ion-title>
+		<ion-buttons end>
+			<button (click)="close()" ion-button icon-only>
+				<ion-icon name="close"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list class="chat-list">
+		<ion-item (click)="add(contact)" (press)="contactCard(contact)" class="item-avatar item-icon-right" [ngClass]="{online: contact.online}" *ngFor="let contact of contacts" type="item-text-wrap">
+			<ion-avatar item-left>
+				<user-image [contact]=contact></user-image>
+    		</ion-avatar>
+			<h2>{{contact.name || contact.username}}</h2>
+		</ion-item>
+	</ion-list>
+</ion-content>

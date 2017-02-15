@@ -1,0 +1,16 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<ion-title>
+			Account
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<h2>{{user.name || user.username}}</h2>
+	<div class="account-image" ng-click="updateImage()">
+		<user-image [contact]=user></user-image>
+	</div>
+	<br><br><br>
+	<button ion-button (click)="logout()" block outline color="primary">Logout</button>
+</ion-content>

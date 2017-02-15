@@ -1,0 +1,29 @@
+<ion-header>
+	<ion-navbar color="{{callService.isInCall ? 'primary' : 'danger'}}">
+		<ion-title>
+			<span *ngIf="callService.isAnswering">Incoming Call from <b>{{callService.contact.name || callService.contact.username}}</b></span>
+			<span *ngIf="callService.isCalling">Calling <b>{{callService.contact.name || callService.contact.username}}</b></span>
+			<span *ngIf="callService.isInCall"><b>{{callService.contact.name || callService.contact.username}}</b></span>
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content scroll="false">
+	<div class="call-buttons inCallUI">
+		<button ion-button round icon-only color="secondary" class="button-answering" *ngIf="callService.isAnswering" (click)="callService.answer()"><ion-icon name="call"></ion-icon></button>
+		<button ion-button round icon-only color="danger" class="button-answering" *ngIf="callService.isAnswering" (click)="callService.ignore()"><ion-icon name="close"></ion-icon></button>
+
+		<button ion-button round icon-only outline color="danger" class="button-calling" *ngIf="callService.isCalling" (click)="callService.cancel()"><ion-icon name="close"></ion-icon></button>
+
+		<button ion-button round icon-only outline color="light" class="button-incall" *ngIf="callService.isInCall" (click)="callService.flip()"><ion-icon name="reverse-camera"></ion-icon></button>
+		<button ion-button round icon-only outline color="danger" class="button-incall" *ngIf="callService.isInCall" (click)="callService.end()"><ion-icon name="close"></ion-icon></button>
+		<button ion-button round icon-only outline color="light" class="button-incall" *ngIf="callService.isInCall" (click)="callService.mute()">
+			<ion-icon name="mic-off" *ngIf="!callService.muted"></ion-icon>
+			<ion-icon name="mic" *ngIf="callService.muted"></ion-icon>
+		</button>
+	</div>
+	<div class="videos inCallUI">
+		<video id="remote" autoplay="true" *ngIf="callService.remoteVideo" [src]="callService.remoteVideo"></video>
+		<video id="local" autoplay="true" *ngIf="callService.localVideo" [src]="callService.localVideo" [ngClass]="{preview: callService.isCalling || callService.isAnswering}"></video>
+	</div>
+</ion-content>

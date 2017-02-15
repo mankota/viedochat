@@ -1,0 +1,32 @@
+modal-contact {
+
+	.contact-card img {
+		width: 180px;
+		height: 180px;
+		border-radius: 100%;
+		overflow: hidden;
+	}
+
+	user-image {
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	button.action {
+		height: 50px;
+		width: 50px;
+		margin: 10px;
+	}
+
+	button.close {
+		float: right;
+		position: absolute;
+		margin-top: -20px;
+		margin-left: 28vw;
+	}
+
+	h2 {
+		margin-bottom: 30px;
+	}
+}

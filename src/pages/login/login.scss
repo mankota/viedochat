@@ -1,0 +1,53 @@
+page-login {
+	.logo, .logo h1 {
+		text-align: center;
+		transition: all .3s ease;
+	}
+	.logo.input {
+		margin-top: -33vh;
+	}
+	h1.a,
+	h1.b {
+		font-size: 5em;
+		line-height: 0.8em;
+		text-transform: uppercase;
+	}
+	h1.a {
+		font-weight: 100;
+		font-style: italic;
+		margin-top: 5vh;
+	}
+	h1.b {
+		font-weight: 800;
+		margin-bottom: 10vh;
+	}
+	.label {
+		font-weight: 400;
+		margin-top: 0.7em;
+		font-size: .9em;
+	}
+	input.text-input {
+		background: transparent;
+		border-radius: 6px;
+		padding: .4em .5em;
+		margin-top: 0.4em;
+		font-size: 1.1em;
+	}
+	.button.button-block {
+		border-radius: 6px;
+		margin-top: 2em;
+		font-weight: 900;
+		text-transform: uppercase;
+		font-size: 1.4em;
+	}
+	.input-wrapper {
+		display: block;
+	}
+	ion-input .text-input {
+		margin: 0 0 14px 0 !important;
+		width: 100% !important;
+	}
+	.item-block .item-inner {
+		padding: 0 !important;
+	}
+}

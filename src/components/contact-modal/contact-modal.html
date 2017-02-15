@@ -1,0 +1,13 @@
+<ion-content scroll="false">
+	<div class="contact-card">
+		<button ion-button clear icon-only  color="dark"  (click)="cancel()" class="close"><ion-icon name="close"></ion-icon></button>
+
+		<h2>{{contact.name}}</h2>
+
+		<user-image [contact]=contact></user-image>
+
+		<button ion-button round icon-only  color="secondary"  (click)="call()" class="action"><ion-icon name="call"></ion-icon></button>
+		<button ion-button round icon-only  color="danger" (click)="chat()" class="action"><ion-icon name="chatbubbles"></ion-icon></button>
+
+	</div>
+</ion-content>

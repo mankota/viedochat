@@ -1,0 +1,62 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<ion-buttons start>
+
+		</ion-buttons>
+		<ion-title>
+			{{chat.name}}
+		</ion-title>
+		<ion-buttons end>
+			<button (click)="addContact()" ion-button icon-only>
+				<ion-icon name="add"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding id="messages" class="bg">
+	<ion-list class="chat" [ngClass]="{'chat-animate-on': animateChat}" messages>
+		<ion-item class="chat-item item-avatar item-remove-animate" type="item-text-wrap" *ngFor="let message of messages" [ngClass]="{'chat-first': message.first, 'chat-to':message.from!=contactService.user.id, 'chat-from': message.from==contactService.user.id}">
+			<ion-avatar item-right *ngIf="message.from==contactService.user.id">
+				<user-image [contact]=message.from></user-image>
+			</ion-avatar>
+			<ion-avatar item-left *ngIf="message.from!=contactService.user.id">
+				<user-image [contact]=message.from></user-image>
+			</ion-avatar>
+			<!-- not sure why this doesnt want to cooperate
+			<ion-avatar [attr.item-right]="message.from==contact.id? true : null" [attr.item-left]="message.from!=contact.id ? true : null">
+				<user-image [contact]=message.from></user-image>
+    		</ion-avatar-->
+			<div class="tail">
+				<svg width="19" height="25" viewBox="0 0 19 25"><path d="M19 25c-5.1-0.9-11.6 0-19 0 9.5-4.9 14.7-11.7 19-25C19 8.3 19 16.7 19 25z"/></svg>
+			</div>
+			<div class="chat-text">
+				<p *ngIf="!message.marked && !message.attachment">{{message.message}}</p>
+				<span class="chat-text" [innerHTML]="message.marked" *ngIf="message.marked"></span>
+				<p *ngIf="message.attachment && message.attachment.type.indexOf('video') > -1">
+					<video [src]="message.attachment.url" controls (press)="play($event)" (blur)="pause($event)">
+						<source [src]="message.attachment.url" [type]="message.attachment.type">
+					</video>
+				</p>
+				<p *ngIf="message.attachment && message.attachment.type.indexOf('image') > -1">
+					<img [src]="message.attachment.url">
+				</p>
+			</div>
+		</ion-item>
+	</ion-list>
+</ion-content>
+
+
+<ion-footer class="bar-light message-bar" [keyboardAttach]="content">
+	<ion-toolbar>
+		<input type="file" id="attachment" (change)="upload($event)" [(ngModel)]="data.attachment" *ngIf="attachments">
+		<form (ngSubmit)="send()">
+
+			<ion-item>
+				<ion-input type="text" message="true" (blur)="blurInput($event)" placeholder="Say something..." [(ngModel)]="data.message" name="message" id="messageBox"></ion-input>
+			</ion-item>
+			<label for="attachment" class="attachment-link"><ion-icon name="ios-camera-outline" color="primary"></ion-icon></label>
+			<button ion-button clear class="send-button" color="primary">Send</button>
+		</form>
+	</ion-toolbar>
+</ion-footer>

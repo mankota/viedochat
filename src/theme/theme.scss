@@ -1,0 +1,182 @@
+// color specific settings. for loayout specific css, take a look at each components file.
+@import "../theme/sourcesanspro.scss";
+
+.content-ios,
+.item-ios {
+	color: #393939;
+}
+
+.footer-ios .toolbar-ios:first-child .toolbar-background-ios {
+	border-width: 0;
+}
+
+.toolbar-background-ios {
+	background: #f1f1f1;
+}
+
+page-login {
+	.content-ios,
+	.content-md,
+	.label,
+	.item-input .label-md,
+	.item-input .label-ios,
+	input.text-input {
+		color: #fff;
+	}
+
+	ion-content {
+		background-color: #6462a2 !important;
+	}
+
+	input.text-input {
+		border: 1px solid #fff;
+		background: transparent;
+	}
+
+	.button.button-block {
+		color: #0c1b24;
+	}
+
+	.item-md.item-input .item-inner {
+		border-bottom: none !important;
+		box-shadow: none !important;
+	}
+
+	ion-header {
+		display:none;
+	}
+}
+
+page-contacts {
+	.chat-list .item {
+		border: 0.5px solid rgba(150,150,150,.15);
+		border-left: none;
+		border-right: none;
+		border-top: none;
+	}
+}
+
+page-chats {
+	.chat-list .item {
+		border: 0.5px solid rgba(150,150,150,.15);
+		border-left: none;
+		border-right: none;
+		border-top: none;
+	}
+
+	.chat-list .item .last-time {
+		color: #888;
+	}
+}
+
+page-chat {
+	.chat-item p {
+		background: #ebeaf2;
+		color: #666;
+	}
+
+	.chat-to p {
+		background: #817ecc;
+		color: #fff;
+	}
+
+	.text-input {
+		background: #fff;
+	}
+}
+
+.message-bar .input-wrapper {
+	background: #fff;
+	border-radius: 6px;
+}
+
+.message-bar ion-toolbar {
+	padding: 12px;
+}
+
+.message-bar .item {
+	min-height: auto;
+}
+
+.message-bar input {
+	font-size: 0.8em;
+}
+
+modal-contact {
+	ion-content {
+		background: transparent !important;
+		background-color: transparent !important;
+	}
+
+	.contact-card {
+		background: #817ecb;
+		width: 90vw;
+		height: 400px;
+		max-width: 300px;
+		margin: 20vh auto 0;
+		text-align: center;
+		border-radius: 8px;
+		position: relative !important;
+		padding: 25px;
+	}
+
+	h2 {
+		color: #fff;
+	}
+
+	button.close {
+		color: #fff;
+	}
+}
+
+.md .modal-wrapper {
+	box-shadow: none;
+}
+
+page-chat {
+	.tail svg {
+		fill: #817ecb;
+	}
+	.chat-from .tail svg {
+		fill: #ebeaf2;
+	}
+}
+
+
+// @bug
+// https://github.com/devin-la/ionic-video-chat-v2-issues/issues/42
+.send-button {
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+// uncomment these if you want yo use the old dark theme
+/*
+dark {
+	.bar-clear,
+	.item p,
+	h1,
+	h2,
+	h3 p {
+		color: #fff;
+	}
+
+	.toolbar-title {
+		color: #fff;
+		font-weight: 400;
+	}
+
+	.back-button {
+		color: #fff !important;
+	}
+
+	.chat-item p {
+		background: rgba(255,255,255,.1);
+	}
+
+	.chat-list .item .last-time {
+		color: #fff;
+	}
+}
+*/

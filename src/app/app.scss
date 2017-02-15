@@ -1,0 +1,175 @@
+// @todo: get rid of all the important statements.
+// was easier to just do be lazy when converting from v1 to v2.
+
+#local {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	visibility: visible;
+	height: 10%;
+	bottom: 50px;
+	right: 10px;
+	pointer-events: none;
+	opacity: 1;
+	-webkit-transform: scaleX(-1);
+}
+#local.preview,
+#remote {
+	position: absolute;
+	z-index: -2;
+	display: block;
+	visibility: visible;
+	width: 100vw;
+	height: 100vh;
+	pointer-events: none;
+	opacity: 1;
+	object-fit: cover;
+	top: 0;
+	right: 0;
+}
+.call-buttons {
+	position: absolute;
+	z-index: 99999;
+	bottom: 17vh;
+	text-align: center;
+	width: 100%;
+}
+.call-buttons .button {
+	border-radius: 100%;
+	margin: 1.2em;
+	height: 4em;
+	width: 4em;
+	transition: all 0.1s ease;
+	padding-top: 0.2em;
+	text-align: center;
+}
+.call-buttons span:before {
+	font-size: 2.4em !important;
+}
+.videos {
+	font-size: 0;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	transition: all 1s;
+	pointer-events: none;
+}
+
+.isInCall {
+	display:none;
+}
+.item,
+body,
+ion-app,
+ng-component,
+ion-modal,
+ion-backdrop,
+html {
+	background-color: transparent !important;
+
+}
+*::-webkit-media-controls-panel {
+	display: none!important;
+	-webkit-appearance: none;
+}
+*::--webkit-media-controls-play-button {
+	display: none!important;
+	-webkit-appearance: none;
+}
+*::-webkit-media-controls-start-playback-button {
+	display: none!important;
+	-webkit-appearance: none;
+}
+.call-modal {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+.inCall .nav-bar-container,
+.inCall .view-container {
+	display: none;
+}
+.inCall .inCallUI {
+	display: inherit;
+}
+
+ion-header .toolbar-background {
+	background: transparent;
+	border: none !important;
+}
+
+.last-text {
+	font-size: .9em;
+	opacity: .7;
+	padding-top: .1em;
+}
+.item-avatar .item-content > img:first-child {
+	max-width: 48px;
+	max-height: 48px;
+	left: 0;
+}
+.item-avatar .item-content {
+	padding-left: 72px;
+	padding-top: 21px;
+}
+.padding-lots {
+	padding: 24px;
+}
+.item h2 {
+	font-weight: 400;
+	margin: 0;
+}
+
+.ios, .md {
+	.chat .item {
+		border: none;
+	}
+	.item-block .item-inner {
+		border-bottom: none;
+		border-top: none;
+	}
+	.back-button-text {
+		display: none;
+	}
+}
+
+ion-item, .item {
+	padding: 0;
+}
+.chat {
+	padding-bottom: 40px;
+}
+page-account h2 {
+	text-align: center;
+	font-size: 3em;
+	font-weight: 300;
+	margin-bottom: 2em;
+}
+.button-block {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.login {
+	max-width: 400px;
+	margin: 0 auto;
+}
+.popup-container.active .popup {
+	border-radius: 8px;
+}
+
+.toolbar-ios-light, .toolbar-md-light {
+	border-bottom: 0.5px solid rgba(150, 150, 150, 0.55);
+}
+
+ion-avatar {
+	align-self: flex-start;
+}
+
+video {
+	max-width: 100%;
+}
+
+@import "../theme/theme.scss";

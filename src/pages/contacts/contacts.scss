@@ -1,0 +1,49 @@
+page-contacts {
+	.chat-list .item:first-child {
+		border-top: none;
+	}
+	.chat-list .item:last-child {
+		border-bottom: none;
+	}
+
+	// @todo
+	// angular2 doesnt seem to play well with animations yet.
+	/*
+	.chat-list .item.ng-enter {
+		-webkit-animation: fadeInLeft 0.4s;
+		animation: fadeInLeft 0.4s;
+	}
+	.chat-list .item.ng-leave {
+		-webkit-animation: fadeOutLeft 0.4s;
+		animation: fadeOutLeft 0.4s;
+	}
+	.chat-list .item.ng-enter-stagger {
+		-webkit-animation-delay: 100ms;
+		animation-delay: 100ms;
+		-webkit-animation-duration: 0;
+		animation-duration: 0;
+	}
+	.chat-list .item h2,
+	.chat-list .item img,
+	.chat-list .item p {
+		transition: all 0.3s ease;
+	}
+	.chat-list .item.online img::before {
+		content: ' ';
+		display: block;
+		position: absolute;
+		height: 20px;
+		width: 20px;
+		background: red;
+	}
+	*/
+	.chat-list .item-avatar {
+		min-height: 40px;
+	}
+	.chat-list .item:not(.online) h2,
+	.chat-list .item:not(.online) img,
+	.chat-list .item:not(.online) p {
+		opacity: 0.3;
+	}
+
+}

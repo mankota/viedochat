@@ -1,0 +1,23 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<ion-title>
+			Contacts
+		</ion-title>
+		<ion-buttons end>
+			<button (click)="goChats()" ion-button icon-only>
+				<ion-icon name="chatbubbles"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list class="chat-list">
+		<ion-item (click)="chat(contact.id)" (press)="contactCard(contact)" class="item-remove-animate item-avatar item-icon-right" [ngClass]="{online: contact.online}" *ngFor="let contact of contactService.contacts" type="item-text-wrap">
+			<ion-avatar item-left>
+				<user-image [contact]=contact></user-image>
+    		</ion-avatar>
+			<h2>{{contact.name || contact.username}}</h2>
+		</ion-item>
+	</ion-list>
+</ion-content>

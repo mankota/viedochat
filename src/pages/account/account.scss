@@ -1,0 +1,13 @@
+page-account {
+	.account-image {
+		height: 180px;
+		width: 180px;
+		margin: 0 auto;
+		overflow: hidden;
+		border-radius: 100%;
+	}
+	.account-image img {
+		height: 100%;
+		width: 100%;
+	}
+}

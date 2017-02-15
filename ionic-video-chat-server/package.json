@@ -1,0 +1,23 @@
+{
+	"name": "ionic-video-chat-server",
+	"version": "1.0.2",
+	"description": "Server for Ionic Video Chat",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js",
+		"dev": "nodemon --exec 'node -r dotenv/config' server.js"
+	},
+	"dependencies": {
+		"aws-sdk": "^2.9.0",
+		"bcrypt": "^1.0.2",
+		"cors": "^2.8.1",
+		"express": "^4.14.0",
+		"helmet": "^3.4.0",
+		"jwt-simple": "^0.5.1",
+		"mongodb": "^2.2.21",
+		"socket.io": "^1.7.2"
+	},
+	"devDependencies": {
+		"dotenv": "^4.0.0"
+	}
+}

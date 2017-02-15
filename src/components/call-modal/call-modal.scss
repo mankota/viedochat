@@ -1,0 +1,14 @@
+modal-call {
+	ion-content {
+		background: transparent !important;
+		background-color: transparent !important;
+	}
+}
+
+.ios {
+	modal-call {
+		#local {
+			bottom: 80px;
+		}
+	}
+}
