@@ -16,11 +16,11 @@
 var JWT_SECRET = process.env.JWT_SECRET || 'change-me-please!';
 
 // this this to your s3 bucket name
-var S3_BUCKET = process.env.S3_BUCKET || 'ionic-video-chat-v2-images';
+var S3_BUCKET = process.env.S3_BUCKET || 'worlddove'; //ionic-video-chat-v2-images
 
 // these are digested by aws and should be set in your environment vars, or here
-process.env.AWS_ACCESS_KEY_ID = process.env.AWS_ACCESS_KEY_ID || 'your-key-here';
-process.env.AWS_SECRET_ACCESS_KEY = process.env.AWS_SECRET_ACCESS_KEY || 'your-access-key-here';
+process.env.AWS_ACCESS_KEY_ID = process.env.AWS_ACCESS_KEY_ID || 'AKIAJJQ5JC4DQWNZAOTQ';
+process.env.AWS_SECRET_ACCESS_KEY = process.env.AWS_SECRET_ACCESS_KEY || 'HGElMp+K0+F5bKJxrknbxkUdY45vJYVOrkhCZw6i';
 
 
 
